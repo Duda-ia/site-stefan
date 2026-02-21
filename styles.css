@@ -121,6 +121,16 @@ body {
   .nav-list { flex-direction: column; padding: 1rem; }
 }
 
+/* Imagens responsivas (bordas suaves, sem sobrecarregar o layout) */
+.hero-img,
+.sobre-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -129,13 +139,38 @@ body {
   align-items: center;
   padding: 8rem 0 4rem;
 }
+.hero .container { max-width: 1100px; }
 .hero-bg {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(15,76,92,0.03) 0%, transparent 50%);
   pointer-events: none;
 }
+.hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+  .hero-content { flex: 1; min-width: 0; }
+  .hero-img-wrap {
+    flex: 0 0 42%;
+    max-width: 480px;
+  }
+}
 .hero-content { position: relative; }
+.hero-img-wrap {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
 .hero-title {
   font-size: clamp(2rem, 5vw, 3.75rem);
   font-weight: 700;
@@ -203,6 +238,31 @@ body {
 .card-cta { margin: 0; font-size: 1rem; }
 
 /* Sobre */
+.section-sobre .container { max-width: 1000px; }
+.sobre-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .sobre-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .sobre-img-wrap {
+    flex: 0 0 320px;
+    max-width: 320px;
+  }
+  .sobre-content { flex: 1; min-width: 0; }
+}
+.sobre-img-wrap {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
 .sobre-list { margin: 0 0 1.5rem; padding-left: 1.25rem; }
 .sobre-list li { margin-bottom: 0.5rem; }
 .sobre-text { margin: 0; max-width: 640px; color: var(--text-muted); }
