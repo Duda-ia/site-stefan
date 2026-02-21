@@ -1,0 +1,159 @@
+<!--
+  GUIA RÁPIDO - ONDE EDITAR:
+  - WhatsApp: em script.js, variável WHATSAPP_NUMBER (apenas dígitos, ex: 5511999999999)
+  - Endereço: procure "EDITAR AQUI" na seção Localização e no schema JSON-LD no final do <head>
+  - Horários: procure "EDITAR AQUI" na seção Localização
+  - Textos: cada seção tem comentário "EDITAR AQUI" próximo ao conteúdo editável
+  - Cores: em styles.css, variáveis --primary e --accent no :root
+  - Schema (SEO): no <head>, script type="application/ld+json" (telephone e address)
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Stefan Welkovic Junior | Neurologista - Demências e Parkinson</title>
+  <meta name="description" content="Dr. Stefan Welkovic Junior, neurologista com foco em Neurologia Cognitiva (demências) e Doença de Parkinson. Atendimento humanizado e baseado em evidências. CRM 29026 | RQE 15853.">
+  <meta property="og:title" content="Dr. Stefan Welkovic Junior | Neurologista">
+  <meta property="og:description" content="Neurologia com foco em cognição e qualidade de vida. Demências e Parkinson.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- EDITAR AQUI (schema): substitua os valores abaixo por telefone e endereço reais -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Stefan Welkovic Junior",
+    "medicalSpecialty": "Neurology",
+    "description": "Neurologista com foco em Neurologia Cognitiva (demências) e Doença de Parkinson.",
+    "telephone": "+55XXXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Exemplo, 123",
+      "addressLocality": "Cidade",
+      "addressRegion": "UF",
+      "postalCode": "00000-000"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo">Dr. Stefan Welkovic Junior</a>
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#atuacao" class="nav-link">Atuação</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#como-funciona" class="nav-link">Como funciona</a></li>
+          <li><a href="#localizacao" class="nav-link">Localização</a></li>
+          <li><a href="#agendar" class="nav-link nav-cta">Agendar</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title">Neurologia com foco em cognição e qualidade de vida.</h1>
+        <p class="hero-sub">Atendimento humano, criterioso e baseado em evidências, com atenção especial às demências e à Doença de Parkinson.</p>
+        <a href="#" class="btn btn-primary btn-hero js-whatsapp" id="cta-hero" aria-label="Agendar consulta pelo WhatsApp">Agendar pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section section-atuacao" id="atuacao">
+      <div class="container">
+        <h2 class="section-title">Atuação</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 class="card-title">Demências / Neurologia Cognitiva</h3>
+            <p class="card-intro"><!-- EDITAR AQUI: o que é --> Alterações da memória, raciocínio e comportamento que impactam o dia a dia. O diagnóstico e o acompanhamento especializado ajudam a preservar a qualidade de vida e a orientar a família.</p>
+            <h4 class="card-subtitle">Sinais de alerta</h4>
+            <ul class="card-list">
+              <li>Esquecimentos frequentes que atrapalham rotina</li>
+              <li>Dificuldade para planejar ou tomar decisões</li>
+              <li>Mudanças de humor ou comportamento</li>
+            </ul>
+            <p class="card-cta"><strong>Quando procurar:</strong> Quando você ou um familiar notar perda de memória persistente, confusão ou alterações que preocupem no cotidiano.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Doença de Parkinson / Distúrbios do movimento</h3>
+            <p class="card-intro"><!-- EDITAR AQUI: o que é --> Condições que afetam o movimento (tremor, rigidez, lentidão). O acompanhamento neurológico permite controle dos sintomas e melhor qualidade de vida.</p>
+            <h4 class="card-subtitle">Sinais de alerta</h4>
+            <ul class="card-list">
+              <li>Tremor em repouso (mãos, queixo)</li>
+              <li>Rigidez ou lentidão ao se movimentar</li>
+              <li>Alterações na marcha ou no equilíbrio</li>
+            </ul>
+            <p class="card-cta"><strong>Quando procurar:</strong> Ao notar tremor persistente, lentidão ou dificuldade para caminhar que não melhora com o tempo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sobre" id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre o médico</h2>
+        <div class="sobre-content">
+          <ul class="sobre-list">
+            <li>Médico Neurologista Geral (foco em Neurologia Cognitiva e demências)</li>
+            <li>Professor, preceptor e pesquisador em Neurologia</li>
+            <li>CRM 29026 | RQE 15853</li>
+          </ul>
+          <p class="sobre-text"><!-- EDITAR AQUI: parágrafo humano --> Atuo com o objetivo de oferecer um atendimento claro, acolhedor e fundamentado em evidências científicas, ajudando pacientes e famílias a entenderem o quadro e as melhores opções de tratamento.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-como" id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">Como funciona a consulta</h2>
+        <ol class="passos">
+          <li class="passo"><span class="passo-num">1</span> <strong>Escuta e avaliação completa</strong> — História clínica e exame neurológico detalhado.</li>
+          <li class="passo"><span class="passo-num">2</span> <strong>Exames quando indicados</strong> — Solicitação de exames se necessário e explicação da hipótese diagnóstica.</li>
+          <li class="passo"><span class="passo-num">3</span> <strong>Plano terapêutico e acompanhamento</strong> — Tratamento combinado a reavaliações periódicas.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-local" id="localizacao">
+      <div class="container">
+        <h2 class="section-title">Localização e contato</h2>
+        <div class="local-content">
+          <p class="local-item"><strong>Endereço:</strong> <!-- EDITAR AQUI: endereço completo --> [Rua Exemplo, 123 – Bairro – Cidade/UF – CEP]</p>
+          <p class="local-item"><strong>Horários:</strong> <!-- EDITAR AQUI: horários --> [Ex.: Segunda a sexta, 8h às 18h]</p>
+          <p class="local-item"><strong>WhatsApp:</strong> <a href="#" class="link-whatsapp js-whatsapp">[Clique para agendar]</a></p>
+          <a href="#" class="btn btn-primary btn-large js-whatsapp" id="cta-local" aria-label="Agendar consulta pelo WhatsApp">Agendar pelo WhatsApp</a>
+          <p class="local-aviso">Caso de urgência, procure pronto atendimento.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-agendar" id="agendar">
+      <div class="container">
+        <p class="agendar-text">Agende sua consulta pelo WhatsApp.</p>
+        <a href="#" class="btn btn-primary btn-large js-whatsapp" aria-label="Agendar consulta pelo WhatsApp">Agendar pelo WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-aviso">As informações deste site têm caráter educativo e não substituem consulta médica.</p>
+      <p class="footer-crm">CRM 29026 | RQE 15853</p>
+    </div>
+  </footer>
+
+  <a href="#" class="whatsapp-float js-whatsapp" aria-label="Abrir WhatsApp para agendar consulta"></a>
+
+  <script src="script.js"></script>
+</body>
+</html>
