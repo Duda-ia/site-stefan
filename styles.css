@@ -273,26 +273,68 @@ body {
 .sobre-text { margin: 0 0 1.25rem; max-width: 640px; color: var(--text-muted); }
 
 /* Experiência em */
+.section-experiencia {
+  background: #f5f4f2;
+}
 .experiencia-grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
   grid-template-columns: 1fr 1fr;
 }
 @media (min-width: 600px) {
   .experiencia-grid { grid-template-columns: repeat(4, 1fr); }
 }
 .experiencia-item {
-  background: var(--bg-card);
-  padding: 1.25rem 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background: #fff;
+  padding: 1.75rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   font-size: 1rem;
   font-weight: 500;
   color: var(--primary);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.experiencia-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.experiencia-icon {
+  color: var(--primary);
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.experiencia-icon svg {
+  width: 36px;
+  height: 36px;
+}
+.experiencia-label {
+  line-height: 1.4;
+}
+.experiencia-item-destaque {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, #fff 0%, rgba(184,115,51,0.04) 100%);
+  box-shadow: 0 2px 14px rgba(15,76,92,0.08);
+}
+.experiencia-item-destaque:hover {
+  box-shadow: 0 8px 28px rgba(15,76,92,0.12);
+}
+.experiencia-item-destaque .experiencia-icon {
+  color: var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .experiencia-item { transition: none; }
+  .experiencia-item:hover { transform: none; }
 }
 
 /* Passos */
