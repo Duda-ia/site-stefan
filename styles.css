@@ -1,4 +1,7 @@
-/* ===== EDITAR AQUI: cores primária e destaque ===== */
+/* ===== IDV (manual Stefan Welkovic Junior): paleta de cores e tipografia =====
+   Tipografia do manual: Remixa (display/título) + texto sem serifa.
+   Remixa não está no Google Fonts; uso Plus Jakarta Sans como alternativa.
+   Cores: substitua pelos hex da paleta do PDF (p. Paleta de cores) se tiver. */
 :root {
   --primary: #0F4C5C;
   --accent: #B87333;
@@ -6,7 +9,7 @@
   --bg-card: #fff;
   --text: #1a1a1a;
   --text-muted: #555;
-  --font: 'Montserrat', system-ui, Arial, sans-serif;
+  --font: 'Plus Jakarta Sans', system-ui, Arial, sans-serif;
   --base-size: 18px;
   --line-height: 1.6;
   --space: 1.5rem;
@@ -63,6 +66,7 @@ body {
   font-size: 1.1rem;
   color: var(--primary);
   text-decoration: none;
+  letter-spacing: -0.01em;
 }
 .nav-list {
   list-style: none;
@@ -178,6 +182,7 @@ body {
   line-height: 1.2;
   margin: 0 0 1rem;
   color: var(--primary);
+  letter-spacing: -0.02em;
 }
 .hero-sub {
   font-size: 1.25rem;
@@ -213,9 +218,10 @@ body {
 .section { padding: 4rem 0; scroll-margin-top: 5rem; }
 .section-title {
   font-size: 1.875rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 2rem;
   color: var(--primary);
+  letter-spacing: -0.01em;
 }
 .cards { display: grid; gap: 2rem; }
 @media (min-width: 700px) {
