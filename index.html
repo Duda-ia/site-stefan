@@ -2,7 +2,6 @@
   GUIA RÁPIDO - ONDE EDITAR:
   - WhatsApp: em script.js, variável WHATSAPP_NUMBER (apenas dígitos, ex: 5511999999999)
   - Endereço: procure "EDITAR AQUI" na seção Localização e no schema JSON-LD no final do <head>
-  - Horários: procure "EDITAR AQUI" na seção Localização
   - Textos: cada seção tem comentário "EDITAR AQUI" próximo ao conteúdo editável
   - Cores: em styles.css, variáveis --primary e --accent no :root
   - Schema (SEO): no <head>, script type="application/ld+json" (telephone e address)
@@ -45,7 +44,9 @@
 <body>
   <header class="header" id="header">
     <div class="header-inner">
-      <a href="#inicio" class="logo">Dr. Stefan Welkovic Junior</a>
+      <a href="#inicio" class="logo" aria-label="Dr. Stefan Welkovic Junior – início">
+        <img src="images/logostefan1.png" alt="Dr. Stefan Welkovic Junior – Neurologista" class="logo-img" loading="eager">
+      </a>
       <nav class="nav" aria-label="Menu principal">
         <ul class="nav-list">
           <li><a href="#inicio" class="nav-link">Início</a></li>
@@ -69,7 +70,7 @@
           <a href="#" class="btn btn-primary btn-hero js-whatsapp" id="cta-hero" aria-label="Agendar consulta pelo WhatsApp">Agendar pelo WhatsApp</a>
         </div>
         <div class="hero-img-wrap">
-          <img src="fotos/stefan-jaleco.jpg" alt="Dr. Stefan Welkovic Junior, médico neurologista" class="hero-img" width="480" height="360" loading="eager">
+          <img src="images/stefan-jaleco.png" alt="Dr. Stefan Welkovic Junior, médico neurologista" class="hero-img" width="480" height="360" loading="eager">
         </div>
       </div>
     </section>
@@ -93,16 +94,19 @@
             <h3 class="card-title">Doença de Parkinson e distúrbios do movimento</h3>
             <p class="card-intro">Condições que afetam o movimento, como tremor, rigidez e lentidão. O acompanhamento neurológico ajuda a controlar os sintomas e a melhorar a qualidade de vida.</p>
             <h4 class="card-subtitle">Sinais de alerta</h4>
+            <br>
             <ul class="card-list">
               <li>Tremor em repouso (mãos, queixo)</li>
               <li>Rigidez ou lentidão ao se movimentar</li>
               <li>Alterações na marcha ou no equilíbrio</li>
             </ul>
+            <br><br>
             <p class="card-cta"><strong>Quando procurar:</strong> Ao notar tremor persistente, lentidão ou dificuldade para caminhar que não melhora com o tempo.</p>
           </article>
           <article class="card">
             <h3 class="card-title">Dores de cabeça</h3>
             <p class="card-intro">Enxaqueca, cefaleia tensional e outras dores de cabeça que se repetem ou incomodam muito. Avaliação para identificar a causa e definir o melhor tratamento.</p>
+            <br>
             <p class="card-cta"><strong>Quando procurar:</strong> Quando as dores de cabeça forem frequentes, fortes ou diferentes do que você costuma sentir.</p>
           </article>
           <article class="card">
@@ -119,7 +123,7 @@
         <h2 class="section-title">Sobre o médico</h2>
         <div class="sobre-inner">
           <div class="sobre-img-wrap">
-            <img src="fotos/stefan-social.jpg" alt="Dr. Stefan Welkovic Junior" class="sobre-img" width="400" height="400" loading="lazy">
+            <img src="images/stefan-social.png" alt="Dr. Stefan Welkovic Junior" class="sobre-img" width="400" height="400" loading="lazy">
           </div>
           <div class="sobre-content">
             <p class="sobre-text">Meu compromisso é oferecer um atendimento claro, acolhedor e baseado em evidências, ajudando você e sua família a entender o que está acontecendo e as melhores opções de cuidado.</p>
@@ -148,7 +152,7 @@
             <span class="experiencia-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
             <span class="experiencia-label">Dores de cabeça</span>
           </li>
-          <li class="experiencia-item experiencia-item-destaque">
+          <li class="experiencia-item">
             <span class="experiencia-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="3"/><path d="M5 20c0-3 3-5 7-5s7 2 7 5"/><path d="M12 11v1M10 14l2 2 2-2"/></svg></span>
             <span class="experiencia-label">Neurologia cognitiva e do comportamento</span>
           </li>
@@ -165,22 +169,29 @@
         <h2 class="section-title">Localização e contato</h2>
         <div class="local-inner">
           <div class="local-content">
-            <p class="local-item"><strong>Endereço:</strong> Rua Ana Angélica, 63 — Graças, Recife — PE</p>
-            <p class="local-item"><strong>Horários:</strong> <!-- EDITAR AQUI: horários --> [Ex.: Segunda a sexta, 8h às 18h]</p>
-            <p class="local-item"><strong>WhatsApp:</strong> <a href="#" class="link-whatsapp js-whatsapp">[Clique para agendar]</a></p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Ana+Angélica+63,+Graças,+Recife,+Pernambuco" target="_blank" rel="noopener noreferrer" class="btn btn-outline local-btn-mapa" aria-label="Abrir endereço no Google Maps">Ver no Google Maps</a>
-            <a href="#" class="btn btn-primary btn-large js-whatsapp" id="cta-local" aria-label="Agendar consulta pelo WhatsApp">Agendar pelo WhatsApp</a>
-            <p class="local-aviso">Caso de urgência, procure pronto atendimento.</p>
+            <div class="local-locais">
+              <div class="local-bloco js-local-map" data-map="https://www.google.com/maps?q=R.+Ana+Angélica+63,+Derby,+Recife+52010-230&z=16&output=embed" data-title="Clínica Neurológica Paulo Brito">
+                <h3 class="local-nome">Clínica Neurológica Paulo Brito</h3>
+                <p class="local-item">R. Ana Angélica, 63, Derby, Recife 52010-230</p>
+                <p class="local-item">Contato: <a href="tel:+558134214166">(81) 3421-4166</a> ou <a href="tel:+5581988955273">(81) 98895-5273</a></p>
+              </div>
+              <div class="local-bloco js-local-map" data-map="https://www.google.com/maps?q=Av.+República+do+Líbano+251,+Recife+51110-160&z=16&output=embed" data-title="Censore - Centro de Neurologia e Sono do Recife">
+                <h3 class="local-nome">Censore - Centro de Neurologia e Sono do Recife</h3>
+                <p class="local-item">Av. República do Líbano, 251, Recife 51110-160</p>
+                <p class="local-item">Contato: <a href="tel:+5581999364027">(81) 99936-4027</a></p>
+              </div>
+            </div>
           </div>
           <div class="local-map-wrap">
             <iframe
+              id="local-iframe"
               class="local-map"
-              src="https://www.google.com/maps?q=Rua+Ana+Angélica+63,+Graças,+Recife,+Pernambuco&z=16&output=embed"
+              src="https://www.google.com/maps?q=R.+Ana+Angélica+63,+Derby,+Recife+52010-230&z=16&output=embed"
               allowfullscreen
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="Localização: Rua Ana Angélica 63, Graças, Recife"
-           ></iframe>
+              title="Mapa: Clínica Neurológica Paulo Brito"
+            ></iframe>
           </div>
         </div>
       </div>

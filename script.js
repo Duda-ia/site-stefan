@@ -73,8 +73,28 @@ var WHATSAPP_NUMBER = '5511999999999';
     });
   }
 
+  function localMapSwitch() {
+    var iframe = document.getElementById('local-iframe');
+    var blocos = document.querySelectorAll('.js-local-map');
+    if (!iframe || !blocos.length) return;
+    blocos.forEach(function (bloco) {
+      bloco.addEventListener('click', function () {
+        var src = bloco.getAttribute('data-map');
+        var title = bloco.getAttribute('data-title');
+        if (src) {
+          iframe.src = src;
+          if (title) iframe.setAttribute('title', 'Mapa: ' + title);
+          blocos.forEach(function (b) { b.classList.remove('is-active'); });
+          bloco.classList.add('is-active');
+        }
+      });
+    });
+    if (blocos[0]) blocos[0].classList.add('is-active');
+  }
+
   setWhatsAppLinks();
   smoothScroll();
   activeSection();
   menuToggle();
+  localMapSwitch();
 })();

@@ -62,11 +62,20 @@ body {
   justify-content: space-between;
 }
 .logo {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--primary);
+  display: block;
+  line-height: 0;
   text-decoration: none;
-  letter-spacing: -0.01em;
+}
+.logo-img {
+  display: block;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .logo-img {
+    height: 32px;
+  }
 }
 .nav-list {
   list-style: none;
@@ -311,7 +320,12 @@ body {
 }
 .experiencia-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 28px rgba(15,76,92,0.12);
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, #fff 0%, rgba(184,115,51,0.04) 100%);
+}
+.experiencia-item:hover .experiencia-icon {
+  color: var(--accent);
 }
 .experiencia-icon {
   color: var(--primary);
@@ -410,6 +424,34 @@ body {
   .local-map-wrap { flex: 1; min-width: 0; min-height: 280px; }
 }
 .local-content { max-width: 100%; }
+.local-locais { margin-bottom: 1.5rem; }
+.local-bloco {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.local-bloco:hover {
+  background: rgba(15,76,92,0.03);
+  border-color: rgba(15,76,92,0.2);
+}
+.local-bloco.is-active {
+  border-left: 4px solid var(--accent);
+  background: rgba(184,115,51,0.06);
+}
+.local-nome {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.5rem;
+}
+.local-bloco .local-item { margin-bottom: 0.5rem; }
+.local-bloco .local-item:last-child { margin-bottom: 0; }
+.local-bloco a { color: var(--primary); font-weight: 500; }
+.local-bloco a:hover { text-decoration: underline; }
 .local-item { margin-bottom: 1rem; }
 .link-whatsapp { color: var(--primary); font-weight: 600; }
 .local-btn-mapa { margin-bottom: 0.5rem; }
