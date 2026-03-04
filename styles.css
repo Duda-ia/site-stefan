@@ -238,7 +238,8 @@ body {
 }
 .cards-4 { gap: 1.75rem; }
 @media (min-width: 700px) {
-  .cards-4 { grid-template-columns: 1fr 1fr; }
+  .cards-4 { grid-template-columns: 1fr 1fr 1fr; }
+  .cards-4 .card-destaque { grid-column: 1 / -1; }
 }
 .card {
   background: var(--bg-card);
@@ -246,6 +247,21 @@ body {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+.card-destaque {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(184,115,51,0.06) 100%);
+  box-shadow: 0 2px 16px rgba(15,76,92,0.08);
+  padding: 2rem 2.5rem;
+}
+.card-destaque .card-title { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.card-subtitle-destaque {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 0 0 1.25rem;
+}
+.card-destaque .card-intro { margin-bottom: 1.5rem; }
+.card-destaque .card-subtitle { margin-top: 0.5rem; }
 .card-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -253,7 +269,7 @@ body {
   color: var(--primary);
 }
 .card-intro { margin: 0 0 1.25rem; color: var(--text-muted); }
-.card-subtitle { font-size: 1.1rem; margin: 0 0 0.5rem; }
+.card-subtitle { font-size: 1.1rem; margin: 0 0 0.5rem; font-weight: 600; color: var(--primary); }
 .card-list { margin: 0 0 1rem; padding-left: 1.25rem; }
 .card-cta { margin: 0; font-size: 1rem; }
 
