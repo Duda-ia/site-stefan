@@ -238,7 +238,11 @@ body {
 }
 .cards-4 { gap: 1.75rem; }
 @media (min-width: 700px) {
-  .cards-4 { grid-template-columns: 1fr 1fr 1fr; }
+  .cards-4 { grid-template-columns: repeat(3, 1fr); }
+  .cards-4 .card-destaque { grid-column: 1 / -1; }
+}
+@media (min-width: 900px) {
+  .cards-4 { grid-template-columns: repeat(5, 1fr); }
   .cards-4 .card-destaque { grid-column: 1 / -1; }
 }
 .card {
@@ -246,6 +250,20 @@ body {
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+.card-secundario {
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+.card-secundario .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.card-secundario .card-intro {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
 }
 .card-destaque {
   border-left: 4px solid var(--accent);
@@ -300,6 +318,26 @@ body {
   overflow: hidden;
 }
 .section-sobre .sobre-content { text-align: justify; }
+.sobre-nome {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.2rem;
+}
+.sobre-cargo {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0 0 0.15rem;
+}
+.sobre-crm {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.02em;
+}
+.sobre-texto-pessoal { margin-top: 0; }
 .sobre-list { margin: 0 0 1.5rem; padding-left: 1.25rem; }
 .sobre-list li { margin-bottom: 0.5rem; }
 .sobre-text { margin: 0 0 1.25rem; max-width: 640px; color: var(--text-muted); }
